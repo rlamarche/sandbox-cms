@@ -1,0 +1,7 @@
+parameters:
+#    rlcms.example.class: RL\CMSBundle\Example
+
+services:
+#    rlcms.example:
+#        class: %rlcms.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
