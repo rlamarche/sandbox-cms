@@ -1,7 +1,7 @@
 {% extends '::layout.html.twig' %}
 
 {% block jumbotron %}
-    {{ render(controller('RLCMSBundle:Block:render', {
+    {{ render(controller('RLCMSBundle:BlockHelper:render', {
     'name': 'home/jumbotron',
     'template': 'jumbotron'
     })) }}
@@ -13,17 +13,17 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">
-            {{ render(controller('RLCMSBundle:Block:render', {
+            {{ render(controller('RLCMSBundle:BlockHelper:render', {
             'name': 'home/heading/1'
             })) }}
         </div>
         <div class="col-md-4">
-            {{ render(controller('RLCMSBundle:Block:render', {
+            {{ render(controller('RLCMSBundle:BlockHelper:render', {
             'name': 'home/heading/2'
             })) }}
         </div>
         <div class="col-md-4">
-            {{ render(controller('RLCMSBundle:Block:render', {
+            {{ render(controller('RLCMSBundle:BlockHelper:render', {
             'name': 'home/heading/3'
             })) }}
         </div>

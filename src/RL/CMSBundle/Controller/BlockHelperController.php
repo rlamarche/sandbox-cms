@@ -12,7 +12,7 @@ use RL\CMSBundle\Entity\Block;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class BlockController extends Controller {
+class BlockHelperController extends Controller {
     public function renderAction($name, $template = null)
     {
         $block = $this->getDoctrine()->getRepository('RLCMSBundle:Block')->loadByName($name);
@@ -26,4 +26,4 @@ class BlockController extends Controller {
         }
         return $this->render('RLCMSBundle:Block:'.$template.'.html.twig', array('block' => $block));
     }
-} 
+}
