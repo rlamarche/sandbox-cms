@@ -24,6 +24,6 @@ class BlockHelperController extends Controller {
         if ($template == null) {
             $template = $block->getTemplate();
         }
-        return $this->render('RLCMSBundle:Block:'.$template.'.html.twig', array('block' => $block));
+        return $this->render('RLCMSBundle:BlockHelper:'.$template.'.html.twig', array('block' => $block));
     }
 }

@@ -1,3 +1,8 @@
 rlcms_homepage:
     pattern:  /
     defaults: { _controller: RLCMSBundle:Default:index }
+
+block:
+    resource: "@RLCMSBundle/Controller/BlockController.php"
+    type:     annotation
+    prefix: /admin
