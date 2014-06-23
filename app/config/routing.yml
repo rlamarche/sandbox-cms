@@ -1,0 +1,4 @@
+rlcms:
+    resource: "@RLCMSBundle/Resources/config/routing.yml"
+    prefix:   /
+

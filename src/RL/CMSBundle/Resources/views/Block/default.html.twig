@@ -1,0 +1,8 @@
+{% if block.title is not null %}
+    <h2>{{ block.title }}</h2>
+{% endif %}
+{% if block.content is not null %}
+    <p>
+        {{ block.content }}
+    </p>
+{% endif %}
