@@ -1,8 +1,8 @@
-{% extends '::base.html.twig' %}
+{% extends '::admin.html.twig' %}
 
-{% block body -%}
-    <h1>Block creation</h1>
+{% block page_title %}Block creation{% endblock %}
 
+{% block page_content -%}
     {{ form(form) }}
 
         <ul class="record_actions">

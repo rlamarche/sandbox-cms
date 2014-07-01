@@ -2,3 +2,5 @@ rlcms:
     resource: "@RLCMSBundle/Resources/config/routing.yml"
     prefix:   /
 
+create:
+    resource: "@CmfCreateBundle/Resources/config/routing/rest.xml"

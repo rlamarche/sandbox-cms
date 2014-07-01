@@ -9,6 +9,7 @@
 namespace RL\CMSBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="RL\CMSBundle\Entity\BlockRepository")
@@ -24,6 +25,7 @@ class Block {
 
     /**
      * @ORM\Column(type="string", length=255, unique=true, nullable=false)
+     * @Assert\NotBlank()
      */
     protected $name;
 

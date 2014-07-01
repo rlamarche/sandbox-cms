@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [ CmfCreateBundle ]
     #java: /usr/bin/java
     filters:
         less:
@@ -74,3 +74,20 @@ swiftmailer:
 
 braincrafted_bootstrap:
     less_filter: less
+
+fos_rest:
+    view:
+        formats:
+            json: true
+
+cmf_create:
+    security:
+        role: false
+    object_mapper_service_id: cmf_create.persistence.orm.object_mapper
+
+services:
+    cmf_create.persistence.orm.object_mapper:
+        class: Midgard\CreatePHP\Mapper\DoctrineOrmMapper
+        arguments:
+            - "%cmf_create.map%"
+            - "@doctrine"

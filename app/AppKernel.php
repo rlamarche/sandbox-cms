@@ -17,6 +17,12 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
+
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new FOS\RestBundle\FOSRestBundle(),
+            new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),
+
             new RL\CMSBundle\RLCMSBundle(),
         );
 

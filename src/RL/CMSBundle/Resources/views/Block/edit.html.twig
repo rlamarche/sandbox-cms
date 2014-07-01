@@ -1,7 +1,8 @@
-{% extends '::base.html.twig' %}
+{% extends '::admin.html.twig' %}
 
-{% block body -%}
-    <h1>Block edit</h1>
+{% block page_title %}Block edit{% endblock %}
+
+{% block page_content -%}
 
     {{ form(edit_form) }}
 

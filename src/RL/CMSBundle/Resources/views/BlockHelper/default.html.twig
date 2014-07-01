@@ -1,3 +1,7 @@
+{% createphp block as="rdf" %}
+{{ rdf|raw }}
+{% endcreatephp %}
+{#
 {% if block.title is not null %}
     <h2>{{ block.title }}</h2>
 {% endif %}
@@ -6,3 +10,4 @@
         {{ block.content }}
     </p>
 {% endif %}
+#}
