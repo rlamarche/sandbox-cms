@@ -1,6 +1,8 @@
 <div class="jumbotron">
-    <div class="container">
-        <h1>{{ block.title }}</h1>
-        <p>{{ block.content }}</p>
+    {% createphp block as="rdf" noautotag %}
+    <div {{ createphp_attributes(rdf) }} class="container">
+        <h1 {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h1>
+        <p {{ createphp_attributes( rdf.content ) }}>{{ createphp_content( rdf.content ) }}</p>
     </div>
+    {% endcreatephp %}
 </div>
