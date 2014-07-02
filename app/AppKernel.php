@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
             new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
 
+            new FOS\UserBundle\FOSUserBundle(),
+
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\RestBundle\FOSRestBundle(),
             new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),

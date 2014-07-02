@@ -5,6 +5,7 @@ imports:
 framework:
     #esi:             ~
     #translator:      { fallback: "%locale%" }
+    translator: ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -28,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        fos_csrf_provider: "@form.csrf_provider"
 
 # Assetic Configuration
 assetic:
@@ -75,6 +78,11 @@ swiftmailer:
 braincrafted_bootstrap:
     less_filter: less
 
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: RL\CMSBundle\Entity\User
+
 fos_rest:
     view:
         formats:
@@ -82,7 +90,7 @@ fos_rest:
 
 cmf_create:
     security:
-        role: false
+        role: ROLE_ADMIN
     object_mapper_service_id: cmf_create.persistence.orm.object_mapper
 
 services:

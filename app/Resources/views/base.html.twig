@@ -8,7 +8,11 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
 
         {% include "CmfCreateBundle::includecssfiles.html.twig" %}
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            {% stylesheets '@RLCMSBundle/Resources/less/main.less' %}
+                <link rel="stylesheet" href="{{ asset_url }}">
+            {% endstylesheets %}
+        {% endblock %}
         <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
         {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
