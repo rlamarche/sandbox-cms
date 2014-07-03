@@ -18,8 +18,13 @@ class BlockHelperController extends Controller {
         $block = $this->getDoctrine()->getRepository('RLCMSBundle:Block')->loadByName($name);
         if (is_null($block)) {
             $block = new Block();
+            $block->setName($name);
             $block->setTitle('Undefined block');
             $block->setContent('The block "'.$name.'" is not yet defined.');
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($block);
+            $em->flush();
         }
         if ($template == null) {
             $template = $block->getTemplate();
