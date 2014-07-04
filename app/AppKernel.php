@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),
 
+            new FM\ElfinderBundle\FMElfinderBundle(),
+
             new RL\CMSBundle\RLCMSBundle(),
         );
 
