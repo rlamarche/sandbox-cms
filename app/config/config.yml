@@ -67,6 +67,32 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+        mappings:
+            gedmo_translatable:
+                type: annotation
+                prefix: Gedmo\Translatable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
+                is_bundle: false
+            gedmo_translator:
+                type: annotation
+                prefix: Gedmo\Translator\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translator/Entity"
+                alias: GedmoTranslator # this one is optional and will default to the name set for the mapping
+                is_bundle: false
+            gedmo_loggable:
+                type: annotation
+                prefix: Gedmo\Loggable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+                alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
+                is_bundle: false
+            gedmo_tree:
+                type: annotation
+                prefix: Gedmo\Tree\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
+                alias: GedmoTree # this one is optional and will default to the name set for the mapping
+                is_bundle: false
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
@@ -96,7 +122,7 @@ cmf_create:
 fm_elfinder:
     locale: %locale% # defaults to current request locale
     editor: ckeditor # other choices are tinymce or simple
-    showhidden: false # defaults to false
+#    showhidden: false # defaults to false
     fullscreen: true # defaults true, applies to simple and ckeditor editors
     include_assets: true # disable if you want to handle loading of the javascript and css assets yourself
     compression: false # enable if you configured the uglifycss and uglifyjs2 assetic filters and want compression
@@ -109,6 +135,17 @@ fm_elfinder:
                 upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
                 upload_deny: ['all']
                 upload_max_size: 2M
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            translatable: true
+
+jms_i18n_routing:
+    default_locale: en
+    locales: [en, fr]
+    strategy: prefix
 
 services:
     cmf_create.persistence.orm.object_mapper:

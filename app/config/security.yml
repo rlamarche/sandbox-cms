@@ -12,7 +12,12 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
-            logout:       true
+                login_path:  fos_user_security_login
+                check_path:  fos_user_security_check
+                csrf_provider: form.csrf_provider
+            logout:
+              path: fos_user_security_logout
+              target: rlcms_homepage
             anonymous:    true
 
     access_control:

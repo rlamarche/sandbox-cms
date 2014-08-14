@@ -5,17 +5,17 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">{% trans %}Toggle navigation{% endtrans %}</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">{% trans %}Sandbox CMS{% endtrans %}</a>
             </div>
             <div class="navbar-collapse collapse">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <div class="navbar-right">
-                        <p class="navbar-text">Signed in as {{ app.user.username }} </p>
+                        <p class="navbar-text">{% trans with {'%name%': app.user.username} %}Signed in as %name%{% endtrans %}</p>
                         <a class="btn btn-danger navbar-btn" href="{{ path('fos_user_security_logout') }}">
                             {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                         </a>
@@ -24,12 +24,12 @@
                     <form class="navbar-form navbar-right" role="form" action="{{ path("fos_user_security_check") }}" method="post">
                         <input type="hidden" name="_csrf_token" value="{{ fos_csrf_provider.generateCsrfToken('authenticate') }}" />
                         <div class="form-group">
-                            <input type="text" placeholder="Username" class="form-control" name="_username">
+                            <input type="text" placeholder="{% trans %}Username{% endtrans %}" class="form-control" name="_username">
                         </div>
                         <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control" name="_password">
+                            <input type="password" placeholder="{% trans %}Password{% endtrans %}" class="form-control" name="_password">
                         </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
+                        <button type="submit" class="btn btn-success">{% trans %}Sign in{% endtrans %}</button>
                     </form>
                 {% endif %}
 
@@ -45,7 +45,7 @@
         <hr>
 
         <footer>
-            <p>&copy; Company 2014</p>
+            <p>{% trans %}&copy; Company 2014{% endtrans %}</p>
         </footer>
     </div> <!-- /container -->
 

@@ -27,6 +27,11 @@ class AppKernel extends Kernel
 
             new FM\ElfinderBundle\FMElfinderBundle(),
 
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+
+            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
+
             new RL\CMSBundle\RLCMSBundle(),
         );
 
