@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8cf560dc6418e51855e3302fb148fd28",
+    "hash": "2b51cf204c914df4433407e3a84b9517",
     "packages": [
         {
             "name": "avanzu/admin-theme-bundle",
@@ -2065,6 +2065,110 @@
             "time": "2014-07-19 10:52:35"
         },
         {
+            "name": "simplicity/raindrop-routing-bundle",
+            "version": "dev-master",
+            "target-dir": "Raindrop/RoutingBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flylord/RaindropRoutingBundle.git",
+                "reference": "71ffdc497209645e5629005239ac022d41614b8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flylord/RaindropRoutingBundle/zipball/71ffdc497209645e5629005239ac022d41614b8f",
+                "reference": "71ffdc497209645e5629005239ac022d41614b8f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/class-loader": "2.1.*",
+                "symfony/finder": "2.1.*",
+                "symfony/form": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Raindrop\\RoutingBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raindrop Dev Team",
+                    "homepage": "https://github.com/raindropdevs/RaindropRoutingBundle/graphs/contributors"
+                }
+            ],
+            "description": "Symfony Raindrop RoutingBundle",
+            "homepage": "https://github.com/raindropdevs",
+            "keywords": [
+                "database",
+                "doctrine",
+                "router",
+                "routing"
+            ],
+            "time": "2014-01-01 12:40:47"
+        },
+        {
+            "name": "sonata-project/doctrine-extensions",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/sonata-doctrine-extensions.git",
+                "reference": "4c6e9bd3ac9ef4c2f19e552a63d4926db5a9400f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/sonata-doctrine-extensions/zipball/4c6e9bd3ac9ef4c2f19e552a63d4926db5a9400f",
+                "reference": "4c6e9bd3ac9ef4c2f19e552a63d4926db5a9400f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "~2.2",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sonata\\Doctrine\\": "src/",
+                    "Sonata\\Doctrine\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@sonata-project.org",
+                    "homepage": "http://sonata-project.org"
+                },
+                {
+                    "name": "Sonata Community",
+                    "homepage": "https://github.com/sonata-project/sonata-doctrine-extensions/contributors"
+                }
+            ],
+            "description": "Doctrine2 behavioral extensions",
+            "homepage": "https://github.com/sonata-project/sonata-doctrine-extensions",
+            "keywords": [
+                "doctrine",
+                "doctrine2",
+                "json"
+            ],
+            "time": "2014-02-14 12:45:49"
+        },
+        {
             "name": "sonata-project/intl-bundle",
             "version": "2.2.1",
             "source": {
@@ -2937,7 +3041,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "avanzu/admin-theme-bundle": 20,
-        "stof/doctrine-extensions-bundle": 20
+        "stof/doctrine-extensions-bundle": 20,
+        "simplicity/raindrop-routing-bundle": 20
     },
     "prefer-stable": false,
     "platform": {

@@ -27,7 +27,9 @@
         "helios-ag/fm-elfinder-bundle": "1.x",
         "stof/doctrine-extensions-bundle": "~1.1@dev",
         "jms/i18n-routing-bundle": "1.1.*",
-        "sonata-project/intl-bundle": "2.2.*"
+        "sonata-project/intl-bundle": "2.2.*",
+        "simplicity/raindrop-routing-bundle": "dev-master",
+        "sonata-project/doctrine-extensions": "~1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

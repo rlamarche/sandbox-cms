@@ -34,6 +34,8 @@ class AppKernel extends Kernel
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
 
+            new Raindrop\RoutingBundle\RaindropRoutingBundle(),
+
             new RL\CMSBundle\RLCMSBundle(),
         );
 
