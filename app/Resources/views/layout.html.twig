@@ -32,7 +32,18 @@
                         <button type="submit" class="btn btn-success">{% trans %}Sign in{% endtrans %}</button>
                     </form>
                 {% endif %}
-
+                <div class="navbar-right">
+                    <div class="navbar-text dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ app.request.locale | locale | capitalize }}<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            {% for locale in locales %}
+                                {% if locale != app.request.locale %}
+                                    <li><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': locale})) }}">{{ locale | locale | capitalize }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div><!--/.navbar-collapse -->
         </div>
     </div>

@@ -31,6 +31,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         fos_csrf_provider: "@form.csrf_provider"
+        locales: [en, fr]
 
 # Assetic Configuration
 assetic:
@@ -40,7 +41,7 @@ assetic:
     #java: /usr/bin/java
     filters:
         less:
-            node: /usr/local/bin/node
+            node: /usr/bin/node
             node_paths: [/usr/local/lib/node_modules]
             apply_to: "\.less$"
         cssrewrite: ~
